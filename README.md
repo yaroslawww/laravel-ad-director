@@ -6,7 +6,7 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/yaroslawww/laravel-ad-director/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-ad-director/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/yaroslawww/laravel-ad-director/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-ad-director/?branch=master)
 
-Import and manipulate geonames data in your project.
+Package to help you add advertising to your site.
 
 ## Installation
 
@@ -23,6 +23,8 @@ php artisan vendor:publish --provider="AdDirector\ServiceProvider" --tag="config
 ```
 
 ## Usage
+
+TODO: add examples
 
 ## Credits
 
