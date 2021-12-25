@@ -1,4 +1,4 @@
-# Laravel geonames.
+# Laravel advertising manager.
 
 ![Packagist License](https://img.shields.io/packagist/l/yaroslawww/laravel-ad-director?color=%234dc71f)
 [![Packagist Version](https://img.shields.io/packagist/v/yaroslawww/laravel-ad-director)](https://packagist.org/packages/yaroslawww/laravel-ad-director)
