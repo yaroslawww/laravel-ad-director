@@ -5,11 +5,10 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Google Publisher Tag configuration.
-    | https://developers.google.com/publisher-tag/reference
     |--------------------------------------------------------------------------
     |
     */
     'gpt' => [
-
+        'vendor_src' => 'https://securepubads.g.doubleclick.net/tag/js/gpt.js',
     ],
 ];

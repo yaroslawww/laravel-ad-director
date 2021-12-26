@@ -1,1 +1,1 @@
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script async src="{{config('ad-director.gpt.vendor_src')}}"></script>

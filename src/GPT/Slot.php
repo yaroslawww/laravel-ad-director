@@ -44,7 +44,7 @@ class Slot
     public function clearTargets(string|array|null $key = null): static
     {
         if (is_null($key)) {
-            $this->targets[] = [];
+            $this->targets = [];
 
             return $this;
         }

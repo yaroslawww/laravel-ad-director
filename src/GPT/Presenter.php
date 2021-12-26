@@ -3,6 +3,7 @@
 namespace AdDirector\GPT;
 
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Str;
 
 class Presenter
 {
@@ -46,7 +47,7 @@ class Presenter
 
             if (($size = $slot->size()) instanceof Size
                 && ($map = $size->map())) {
-                $this->addSizeMapToScript($slot->divId(), $map);
+                $this->addSizeMapToScript(static::prepareSizeMapVariableName($slot->divId()), $map);
             }
 
             $this->addSlotToScript($slot);
@@ -72,7 +73,7 @@ class Presenter
 
     protected function addSlotToScript(Slot $slot): static
     {
-        $sizeName = $slot->divId();
+        $sizeName = static::prepareSizeMapVariableName($slot->divId());
         $size     = $slot->size();
         if (is_string($size)) {
             $sizeName = $size;
@@ -117,5 +118,10 @@ class Presenter
     public function displayAdsScript(): string
     {
         return $this->scriptDisplayAds;
+    }
+
+    public static function prepareSizeMapVariableName(string $name): string
+    {
+        return Str::camel($name);
     }
 }
