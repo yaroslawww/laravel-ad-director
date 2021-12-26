@@ -34,8 +34,6 @@ If you use Google Publisher Tags, and use repeated sizes - you can easily config
 any service provider - as GPT is singleton.
 
 ```php
-<?php
-
 use AdDirector\Facades\AdDirector;
 use AdDirector\GPT\SizeMap;
 use Illuminate\Support\ServiceProvider;
@@ -75,8 +73,6 @@ class AppServiceProvider extends ServiceProvider
 On page controller you can configure set of advert locations.
 
 ```php
-<?php
-
 use AdDirector\Facades\AdDirector;
 use AdDirector\GPT\Slot;
 
