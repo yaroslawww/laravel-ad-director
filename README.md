@@ -33,7 +33,7 @@ php artisan vendor:publish --provider="AdDirector\ServiceProvider" --tag="config
 If you use Google Publisher Tags, and use repeated sizes - you can easily configure global sizes with size mapping in
 any service provider - as GPT is singleton.
 
-```injectablephp
+```php
 <?php
 
 use AdDirector\Facades\AdDirector;
@@ -74,7 +74,7 @@ class AppServiceProvider extends ServiceProvider
 
 On page controller you can configure set of advert locations.
 
-```injectablephp
+```php
 <?php
 
 use AdDirector\Facades\AdDirector;
