@@ -13,13 +13,13 @@ Package to help you add advertising to your site.
 
 Install the package via composer:
 
-```bash
+```shell
 composer require yaroslawww/laravel-ad-director
 ```
 
 Optionally you can publish the config file with:
 
-```bash
+```shell
 php artisan vendor:publish --provider="AdDirector\ServiceProvider" --tag="config"
 ```
 
@@ -34,14 +34,14 @@ If you use Google Publisher Tags, and use repeated sizes - you can easily config
 any service provider - as GPT is singleton.
 
 ```injectablephp
+<?php
+
 use AdDirector\Facades\AdDirector;
 use AdDirector\GPT\SizeMap;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-
-
     /**
      * Bootstrap any application services.
      *
@@ -75,6 +75,8 @@ class AppServiceProvider extends ServiceProvider
 On page controller you can configure set of advert locations.
 
 ```injectablephp
+<?php
+
 use AdDirector\Facades\AdDirector;
 use AdDirector\GPT\Slot;
 
@@ -90,7 +92,11 @@ class FrontpageController extends Controller
                       // Optional, if not set will be generated automatically
                       'div-gpt-ad-1234567890001-0'
                       // Location identifier, if not set will be used slot's adUnitPath
-                  ), 'header-ads')
+                  )
+                  // Set targeting
+                  ->addTarget('foo', 'bar')
+                  ->addTarget('baz', ['foo', 'bar'])
+             , 'header-ads')
                   
                   ->addLocation(Slot::make(
                       '/1234567/FOO_Medium',
