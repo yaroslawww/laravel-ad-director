@@ -8,6 +8,6 @@ var {{$variableName}} = googletag.sizeMapping();
     $viewPortData = json_encode($mapItem[0]);
     $sizeValueData = json_encode($mapItem[1]);
     ?>
-    {{$variableName}}.addSize({{$viewPortData}}, {{$sizeValueData}});
+    {{$variableName}} = {{$variableName}}.addSize({{$viewPortData}}, {{$sizeValueData}});
 @endforeach
-{{$variableName}}.build();
+{{$variableName}} = {{$variableName}}.build();
